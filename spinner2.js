@@ -1,43 +1,9 @@
-// setTimeout(() => {
-//   process.stdout.write('\r|   ');
-// }, 100);
-
-// setTimeout(() => {
-//   process.stdout.write('\r/   ');
-// }, 300);
-
-// setTimeout(() => {
-//   process.stdout.write('\r-   ');
-// }, 500);
-
-// setTimeout(() => {
-//   process.stdout.write('\r\\   ');
-// }, 700);
-
-// setTimeout(() => {
-//   process.stdout.write('\r|   ');
-// }, 900);
-
-// setTimeout(() => {
-//   process.stdout.write('\r/   ');
-// }, 1100);
-
-// setTimeout(() => {
-//   process.stdout.write('\r-   ');
-// }, 1300);
-
-// setTimeout(() => {
-//   process.stdout.write('\r\\   ');
-// }, 1500);
-
-// setTimeout(() => {
-//   process.stdout.write('\r|   ');
-// }, 1700);
-
-const spinner = ['|', '/', '-', '\\', '|', '/', '-', '\\', '|'];
-
+//created variable to store all the spinner icons in an array
+const spinner = ['\r|', '\r/', '\r-', '\r\\', '\r|', '\r/', '\r-', '\r\\', '\r|'];
+//looping through the array using a for in loop
 for (let i in spinner) {
   setTimeout(() => {
+    // writing each element of the array while increasing
     process.stdout.write(spinner[i]);
   }, i * 200);
 }
